@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-	setlocale(0, "");         int N;
+	        setlocale(0, "");         int N;
 List:
 	do
 	{
@@ -39,7 +39,7 @@ List:
 		if (N == 5) goto Five;
 		if (N == 6) goto Six;
 	}
-	while (N != 7);           goto End;
+	        while (N != 7);           goto End;
 Zero:
 	if (N == 0)
 	{
@@ -61,7 +61,7 @@ Zero:
 		cout << "Игра уже началась!!!                                                  \n";  cout << endl;
 		cout << "-------------------------------------------------------------         \n";  cout << endl;
 
-		char key;                    //пременная, хранящая код нажатой клавиши
+		char key;                            //пременная, хранящая код нажатой клавиши
 
 		do
 		{
@@ -107,10 +107,10 @@ Zero:
 				};
 				cout << action[rand() % 6] << endl;                             cout << endl;
 			}
-		} while (key != Escape);
+		} 
+		while (key != Escape);
 	}
-	goto One;                 goto List;
-
+	        goto One;                 goto List;
 One:
 	if (N == 1)
 	{
@@ -133,14 +133,14 @@ One:
 			cout << "Факториал числа " << n << " = " << F << endl << endl;
 		}
 	}
-	goto Two;                 goto List;
+	        goto Two;                 goto List;
 Two:
 	if (N == 2)
 	{
 		cout << endl;
-		cout << "Задача #2 [Возведение в степень]                                \n";      cout << endl;
+		cout << "Задача #2 [Возведение в степень]                                \n";              cout << endl;
 		cout << "Возвести указанное число в указанную степень,                   \n";	  
-		cout << "основание и показатель степени вводятся с клавиатуры.           \n";      cout << endl;
+		cout << "основание и показатель степени вводятся с клавиатуры.           \n";              cout << endl;
 		cout << "-------------------------------------------------------------   \n";
 		double  a, b, c, k, e;
 		do {
@@ -168,17 +168,16 @@ Two:
 			{
 				c = pow(a, b);  cout << a << " ^ " << b << " = " << pow(a, b) << endl;      cout << endl;
 			}
-		} while (b != 99999999999999);
+		} 
+		while (b != 99999999999999);
 	}
-	goto Three;               goto List;
-
+	        goto Three;               goto List;
 Three:
 	if (N == 3)
 	{
 		cout << endl;
 		cout << "Задача #3 [Таблица ASCII-символов]                               \n";   cout << endl;
 		cout << "Вывести на экран таблицу ASCII-символов по 16 символов в строке. \n";   cout << endl;
-
 		/*	
 		   //Вывод таблицы ASCII-символов кодом:
 			short i;
@@ -189,7 +188,6 @@ Three:
 			}
 			 printf("\n");
 		*/
-
 		srand(time(0)); //инициализировать генератор
 		string mas[37] =
 		{
@@ -236,29 +234,27 @@ Three:
 			cout << mas[i] << endl;      cout << endl;
 		}
 	}
-	goto Four;               goto List;
-
+	        goto Four;               goto List;
 Four:
 	if (N == 4)
 	{
 		cout << endl;
-		cout << "Задача #4 [Ряд Фибоначчи]                                         \n";  cout << endl;
-		cout << "Вывести на экран ряд Фибоначчи до числа, введенного с клавиатуры. \n";
-		cout << "Ряд Фибоначчи можно построить из двух чисел 0 и 1,                \n";
-		cout << "третье число из ряда является суммой первых двух.                 \n";
-		cout << "Каждый следующий член ряда - это сумма двух предыдущих членов:    \n";
-		cout << "	0	1	1	2	3	5	8	13	21 ...                         \n";  cout << endl;
-		cout << "-------------------------------------------------------------     \n";
+		cout << "Задача #4 [Ряд Фибоначчи]                                                      \n";  cout << endl;
+		cout << "Вывести на экран ряд Фибоначчи до числа, введенного с клавиатуры.              \n";
+		cout << "Ряд Фибоначчи можно построить из двух чисел 0 и 1,                             \n";
+		cout << "третье число из ряда является суммой первых двух.                              \n";
+		cout << "Каждый следующий член ряда - это сумма двух предыдущих членов:                 \n";
+		cout << "	0	1	1	2	3	5	8	13	21 ...  \n";  cout << endl;
+		cout << "-------------------------------------------------------------                  \n";
 		int a = 0, b = 1, c = 1, k;
 		cout << "Выведите число, до которого будет постоен ряд Фибоначчи: ";
-		                                                                      cin >> k;  cout << endl;
+		                                                                                              cin >> k;  cout << endl;
 		while (b <= k)   //тело цикла while с условием, до какого числа выводить ряд
 		{
 			cout << c << "	";  c = a + b;   a = b;   b = c;
 		}
 	}
-	goto Five;               goto List;
-
+	        goto Five;               goto List;
 Five:
 	if (N == 5)
 	{
@@ -268,16 +264,14 @@ Five:
 		cout << "-------------------------------------------------------------   \n";
 		int y = 1, x = 0, g = 2, k;
 		cout << "Введите количество чисел Фибоначчи: ";
-		                                                                  cin >> k;   cout << endl;
-		cout << "1 1";
+		cin >> k;       cout << endl;    cout << "1 1";
 		while (g <= k)
 		{
 			x = x + y;                y = x + y;
 			cout << " " << y;         g++;
 		}
 	}
-	goto Six;                goto List;
-
+	        goto Six;                goto List;
 Six:
 	if (N == 6)
 	{
@@ -292,12 +286,12 @@ Six:
 		{
 			for (j = 2; j < sqrt(i); j++)
 			{
-				if ((i % j) != 0)                                                              cout << i << " ";
+				if ((i % j) != 0)                                                      cout << i << " ";
 			}
 		}
 		cout << endl;
 	}
-	goto List;
+	        goto List;
 End:
 	return 0;
 }
